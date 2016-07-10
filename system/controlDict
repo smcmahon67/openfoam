@@ -15,7 +15,7 @@ FoamFile
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-application     interFoam;
+application     icoFoam;
 
 startFrom       startTime;
 
@@ -23,13 +23,13 @@ startTime       0;
 
 stopAt          endTime;
 
-endTime         1;
+endTime         0.5;
 
-deltaT          0.001;
+deltaT          0.005;
 
-writeControl    adjustableRunTime;
+writeControl    timeStep;
 
-writeInterval   0.05;
+writeInterval   20;
 
 purgeWrite      0;
 
@@ -37,20 +37,13 @@ writeFormat     ascii;
 
 writePrecision  6;
 
-writeCompression uncompressed;
+writeCompression off;
 
 timeFormat      general;
 
 timePrecision   6;
 
-runTimeModifiable yes;
-
-adjustTimeStep  yes;
-
-maxCo           1;
-maxAlphaCo      1;
-
-maxDeltaT       1;
+runTimeModifiable true;
 
 
 // ************************************************************************* //
