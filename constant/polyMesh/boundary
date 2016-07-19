@@ -36,7 +36,7 @@ FoamFile
         nFaces          10;
         startFace       855;
     }
-    bottom
+    inlet
     {
         type            patch;
         physicalType    patch;
@@ -50,7 +50,7 @@ FoamFile
         nFaces          10;
         startFace       875;
     }
-    top
+    outlet
     {
         type            patch;
         physicalType    patch;
