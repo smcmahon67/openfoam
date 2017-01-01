@@ -19,7 +19,7 @@ Extrude {0, 0, 1} {
 }
 Physical Surface("front") = {28};
 Physical Surface("back") = {6};
-Physical Surface("bottom") = {19};
-Physical Surface("top") = {27};
+Physical Surface("bottom") = {27};
+Physical Surface("top") = {19};
 Physical Surface("left") = {15};
 Physical Surface("right") = {23};
