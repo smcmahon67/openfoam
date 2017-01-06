@@ -3,23 +3,37 @@ length = DefineNumber[ 10, Name "Parameters/length" ];
 width = DefineNumber[ 10, Name "Parameters/width" ];
 Point(1) = {0, 0, 0, 1.0};
 Point(2) = {width, 0, 0, 1.0};
-Point(3) = {width, length, 0, 1.0};
-Point(4) = {0, length, 0, 1.0};
+Point(3) = {width, 0, length, 1.0};
+Point(4) = {0, 0, length, 1.0};
 Line(1) = {1, 2};
 Line(2) = {2, 3};
 Line(3) = {3, 4};
 Line(4) = {4, 1};
-Line Loop(6) = {4,1,2,3};
-Plane Surface(6) = {6};
-Physical Volume("internal") = {1};
-Extrude {0, 0, 1} {
+//+
+Line Loop(5) = {1, 2, 3, 4};
+//+
+Plane Surface(6) = {5};
+
+//+
+//+
+Extrude {{0, 0, 1}, {0, 0, 0}, 0.08726646259971647} {
   Surface{6};
   Layers{1};
   Recombine;
 }
-Physical Surface("front") = {28};
+//+
+
+//+
+Physical Surface("inlet") = {14};
+//+
+Physical Surface("outlet") = {21};
+//+
+Physical Surface("wall") = {18};
+//+
+Physical Surface("front") = {23};
+//+
 Physical Surface("back") = {6};
-Physical Surface("bottom") = {27};
-Physical Surface("top") = {19};
-Physical Surface("left") = {15};
-Physical Surface("right") = {23};
+//+
+
+//+
+Physical Volume("internal") = {1};
