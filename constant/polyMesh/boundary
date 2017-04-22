@@ -25,15 +25,13 @@ FoamFile
     }
     inlet
     {
-        type            patch;
-        physicalType    patch;
+        type            outletinlet;
         nFaces          10;
         startFace       605;
     }
     outlet
     {
-        type            patch;
-        physicalType    patch;
+        type            freestream;
         nFaces          10;
         startFace       615;
     }
