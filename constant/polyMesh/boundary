@@ -15,7 +15,7 @@ FoamFile
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-6
+5
 (
     back
     {
@@ -23,39 +23,32 @@ FoamFile
         nFaces          250;
         startFace       355;
     }
-    front
-    {
-        type            empty;
-        nFaces          250;
-        startFace       605;
-    }
-    left
-    {
-        type            patch;
-        physicalType    patch;
-        nFaces          10;
-        startFace       855;
-    }
     inlet
     {
         type            patch;
         physicalType    patch;
         nFaces          10;
-        startFace       865;
-    }
-    right
-    {
-        type            patch;
-        physicalType    patch;
-        nFaces          10;
-        startFace       875;
+        startFace       605;
     }
     outlet
     {
         type            patch;
         physicalType    patch;
         nFaces          10;
-        startFace       885;
+        startFace       615;
+    }
+    front
+    {
+        type            empty;
+        nFaces          250;
+        startFace       625;
+    }
+    wall
+    {
+        type            patch;
+        physicalType    patch;
+        nFaces          10;
+        startFace       875;
     }
 )
 
