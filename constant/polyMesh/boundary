@@ -1,9 +1,9 @@
 /*--------------------------------*- C++ -*----------------------------------*\
-| =========                 |                                                 |
-| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
-|  \\    /   O peration     | Version:  v1812                                 |
-|   \\  /    A nd           | Web:      www.OpenFOAM.com                      |
-|    \\/     M anipulation  |                                                 |
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  7
+     \\/     M anipulation  |
 \*---------------------------------------------------------------------------*/
 FoamFile
 {
@@ -20,21 +20,21 @@ FoamFile
     front
     {
         type            wedge;
-        inGroups        1(wedge);
+        inGroups        List<word> 1(wedge);
         nFaces          5700;
         startFace       11081;
     }
     back
     {
         type            wedge;
-        inGroups        1(wedge);
+        inGroups        List<word> 1(wedge);
         nFaces          5700;
         startFace       16781;
     }
     tunnelWall
     {
         type            wall;
-        inGroups        1(wall);
+        inGroups        List<word> 1(wall);
         nFaces          300;
         startFace       22481;
     }

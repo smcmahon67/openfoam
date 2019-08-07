@@ -9,41 +9,28 @@ FoamFile
 {
     version     2.0;
     format      ascii;
-    class       volVectorField;
-    location    "0";
-    object      U;
+    class       dictionary;
+    location    "system";
+    object      setFieldsDict;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-dimensions      [0 1 -1 0 0 0 0];
+defaultFieldValues
+(
+    volScalarFieldValue alpha.water 0
+);
 
-internalField   uniform (0 0 0);
-
-boundaryField
-{
-    front
+regions
+(
+    boxToCell
     {
-        type            wedge;
+        box (0 0 -1) (0.499524 0.0218097 11);
+        fieldValues
+        (
+            volScalarFieldValue alpha.water 1
+        );
     }
-    back
-    {
-        type            wedge;
-    }
-    tunnelWall
-    {
-        type            noSlip;
-    }
-    inlet
-    {
-        type            pressureInletOutletVelocity;
-        value           uniform (0 0 0);
-    }
-    outlet
-    {
-        type            pressureInletOutletVelocity;
-        value           uniform (0 0 0);
-    }
-}
+);
 
 
 // ************************************************************************* //

@@ -5,6 +5,7 @@
 import math
 
 # define parameters
+# the width of the tunnel and the length of the tunt
 wid = 10.0
 len = 10.0
 
