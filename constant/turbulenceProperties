@@ -2,46 +2,31 @@
   =========                 |
   \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
    \\    /   O peration     | Website:  https://openfoam.org
-    \\  /    A nd           | Version:  7
+    \\  /    A nd           | Version:  7  
      \\/     M anipulation  |
 \*---------------------------------------------------------------------------*/
 FoamFile
 {
     version     2.0;
     format      ascii;
-    class       volVectorField;
-    object      U;
+    class       dictionary;
+    location    "constant";
+    object      turbulenceProperties;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-dimensions      [0 1 -1 0 0 0 0];
+simulationType RAS;
 
-internalField   uniform (0 0 0);
-
-boundaryField
+RAS
 {
-  front
-  {
-    type            wedge;
-  }
-  back
-  {
-    type            wedge;
-  }
-  inlet
-  {
-    type            fixedValue;
-    // velocity is 10 in the z direction
-    value           uniform (0 0 10);
-  }
-  outlet
-  {
-      type            zeroGradient;
-  }
-  tunnelWall
-  {
-      type            noSlip;
-  }
+    // Tested with kEpsilon, realizableKE, kOmega, kOmegaSST, v2f,
+    // ShihQuadraticKE, LienCubicKE.
+    RASModel        kEpsilon;
+
+    turbulence      on;
+
+    printCoeffs     on;
 }
+
 
 // ************************************************************************* //

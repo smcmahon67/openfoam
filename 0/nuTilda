@@ -9,14 +9,14 @@ FoamFile
 {
     version     2.0;
     format      ascii;
-    class       volVectorField;
-    object      U;
+    class       volScalarField;
+    object      nuTilda;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-dimensions      [0 1 -1 0 0 0 0];
+dimensions      [0 2 -1 0 0 0 0];
 
-internalField   uniform (0 0 0);
+internalField   uniform 0;
 
 boundaryField
 {
@@ -31,8 +31,7 @@ boundaryField
   inlet
   {
     type            fixedValue;
-    // velocity is 10 in the z direction
-    value           uniform (0 0 10);
+    value           uniform 0;
   }
   outlet
   {
@@ -40,7 +39,7 @@ boundaryField
   }
   tunnelWall
   {
-      type            noSlip;
+    type            zeroGradient;
   }
 }
 
