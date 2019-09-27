@@ -32,7 +32,7 @@ boundaryField
   {
     type            fixedValue;
     // velocity is 10 in the z direction
-    value           uniform (0 0 10);
+    value           uniform (0 0 2921.93074133253);
   }
   outlet
   {

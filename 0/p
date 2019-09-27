@@ -30,12 +30,12 @@ boundaryField
   }
   inlet
   {
-    type            zeroGradient;
+    type            fixedValue;
+    value           uniform 1890300;
   }
   outlet
   {
-    type            fixedValue;
-    value           uniform 0;
+    type            zeroGradient;
   }
   tunnelWall
   {

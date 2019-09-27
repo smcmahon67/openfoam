@@ -6,7 +6,7 @@ import math
 
 # define parameters
 # the width of the tunnel and the length of the tunt
-wid = 10.0
+wid = 0.038
 len = 10.0
 
 # calculate coordinates
@@ -55,7 +55,7 @@ print ");"
 print """
 blocks
 (
-hex (0 4 1 0 3 5 2 3) (19  1 300) simpleGrading (1 1 1)
+hex (0 4 1 0 3 5 2 3) (50  1 1500) simpleGrading (1 1 1)
 );
 
 edges
