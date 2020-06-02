@@ -21,41 +21,41 @@ FoamFile
     {
         type            wedge;
         inGroups        List<word> 1(wedge);
-        nFaces          75000;
-        startFace       148450;
+        nFaces          600000;
+        startFace       1196800;
     }
     back
     {
         type            wedge;
         inGroups        List<word> 1(wedge);
-        nFaces          75000;
-        startFace       223450;
+        nFaces          600000;
+        startFace       1796800;
     }
     tunnelWall
     {
         type            wall;
         inGroups        List<word> 1(wall);
-        nFaces          1500;
-        startFace       298450;
+        nFaces          3000;
+        startFace       2396800;
     }
     inlet
     {
         type            patch;
-        nFaces          50;
-        startFace       299950;
+        nFaces          200;
+        startFace       2399800;
     }
     outlet
     {
         type            patch;
-        nFaces          50;
-        startFace       300000;
+        nFaces          200;
+        startFace       2400000;
     }
     axis
     {
         type            empty;
         inGroups        List<word> 1(empty);
         nFaces          0;
-        startFace       300050;
+        startFace       2400200;
     }
 )
 
