@@ -3,3 +3,4 @@
 # ignore time directories other than zero
 [0-9]*
 !0
+*.OpenFOAM
