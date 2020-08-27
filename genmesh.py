@@ -55,7 +55,7 @@ print ");"
 print """
 blocks
 (
-hex (0 4 1 0 3 5 2 3) (50  1 1500) simpleGrading (1 1 1)
+hex (0 4 1 0 3 5 2 3) (50  1 50) simpleGrading (1 1 1)
 );
 
 edges
