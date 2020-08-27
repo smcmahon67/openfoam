@@ -4,3 +4,5 @@
 [0-9]*
 !0
 *.OpenFOAM
+paraview*
+constant/polyMesh/*
